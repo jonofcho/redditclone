@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiOrigin: 'www.reddit.com/r/'
+  apiOrigin: 'https://www.reddit.com/'
 };
 
 /*
