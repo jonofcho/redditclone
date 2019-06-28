@@ -2,3 +2,28 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.container{
+    max-width: 1200px;
+    margin:64px auto;
+}
+.width-full{
+    width:100%;
+}
+.flex{
+    display:flex;
+}
+.flex-align-between{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+.mat-card{
+    margin-bottom: 8px;
+}
+.snackbar-error{
+    background-color: red;
+}

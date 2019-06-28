@@ -1,0 +1,9 @@
+<mat-card>
+    <p class="author">{{listingData.data.author}}</p>
+    <div class="flex-align-between">
+        <div>
+            <p>{{listingData.data.title}}</p>
+        </div>
+        <img *ngIf="listingData.data.thumbnail_height !== null" [src]="listingData.data.thumbnail">
+    </div>
+</mat-card>

@@ -1,0 +1,12 @@
+<ng-container *ngFor="let comment of comments">
+
+    <mat-card *ngIf="comment">
+        <p class="author">{{comment.author}}</p>
+        <p>{{comment.body}}</p>
+        <ng-container *ngIf="comment.replies && comment.replies.data.children.length > 0">
+            <div style="margin-left: 8px;">
+                    <app-listing-details-comments [comments]="comment.replies.data.children"></app-listing-details-comments>
+                </div>
+            </ng-container>
+        </mat-card>
+    </ng-container>

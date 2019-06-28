@@ -1,0 +1,11 @@
+<mat-card *ngIf="opData">
+    <h3>{{opData.title}}</h3>
+    <p>{{opData.selftext}}</p>
+    <a *ngIf="opData.post_hint === 'link'" [href]="opData.url">{{opData.url}}</a>
+    <img class="width-full" [src]="opData.url" alt="">
+
+    <app-listing-details-comments *ngIf="comments.length > 0; else nocomments" [comments]="comments"></app-listing-details-comments>
+    <ng-template #nocomments>
+            <h4>No comments on post</h4>
+        </ng-template>
+</mat-card>

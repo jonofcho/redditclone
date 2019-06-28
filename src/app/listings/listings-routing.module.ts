@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ListingsContainerComponent } from './listings-container/listings-container.component';
 import { ListingsListComponent } from './listings-list/listings-list.component';
+import { ListingDetailsContainerComponent } from './listing-details-container/listing-details-container.component';
 
 const routes: Routes = [
     {
@@ -11,6 +12,10 @@ const routes: Routes = [
     {
         path: 'r/:subreddit',
         component: ListingsContainerComponent,
+    },
+    {
+        path: 'r/:subreddit/comments/:id/:title',
+        component: ListingDetailsContainerComponent,
     },
     {
         path: '',
