@@ -1,6 +1,12 @@
-
-    <app-listings-list *ngIf="listingData" (onListingClick)="redirectToListingDetail($event)" [listingData]="listingData"> </app-listings-list>
+<ng-container *ngIf="listingData">
     <div class="button-container">
-        <button mat-raised-button color="primary" (click)="onGetListings('' , 'before')">Back</button>
-        <button mat-raised-button color="primary" (click)="onGetListings('' , 'after')">Next</button>
+        <button mat-raised-button (click)="onGetListings('' , 'before')">Back</button>
+        <button mat-raised-button (click)="onGetListings('' , 'after')">Next</button>
     </div>
+    <app-listings-list (onListingClick)="redirectToListingDetail($event)" [listingData]="listingData">
+    </app-listings-list>
+    <div class="button-container">
+        <button mat-raised-button (click)="onGetListings('' , 'before')">Back</button>
+        <button mat-raised-button (click)="onGetListings('' , 'after')">Next</button>
+    </div>
+</ng-container>

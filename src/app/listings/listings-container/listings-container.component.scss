@@ -1,8 +1,12 @@
 .button-container{
-    position: fixed;
-    top: 50vh;
-    left: 25px;
+    max-width: 200px;
+    margin:16px auto;
+
 }
 button + button{
     margin-left: 8px;
+}
+.mat-raised-button{
+    background-color: maroon;
+    color: white;
 }
