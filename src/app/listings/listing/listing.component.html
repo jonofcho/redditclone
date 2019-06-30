@@ -1,5 +1,8 @@
 <mat-card>
-    <p class="author">{{listingData.data.author}}</p>
+    <div class="flex-align-between listing-header">
+        <p class="subreddit">{{listingData.data.subreddit_name_prefixed}}</p>
+        <p class="author">{{listingData.data.author}}</p>
+    </div>
     <div class="flex-align-between">
         <div>
             <p>{{listingData.data.title}}</p>
